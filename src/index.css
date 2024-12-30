@@ -18,3 +18,8 @@
     outline: none;
     border: none;
 }
+
+.link-style {
+    @apply ml-2.5 rounded-4 bg-inputBg default-outline px-3 py-2.5;
+    cursor: pointer;
+}
