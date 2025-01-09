@@ -1,20 +1,61 @@
-import { SideBarData } from "../../data"
+import { SideBarData } from "../../data";
+import styles from "../SideBar/SideBar.module.css";
+import { useEffect, useState } from "react";
 
 const SideBar = () => {
-  return (
-    <div className="fixed left-0 top-custom-65 h-full bg-defaultBg px-4">
-        {
-            SideBarData.map((item) => (
-                <div key={item.icon} className="py-3 font-extralight">
-                    <a href="" className="flex flex-col justify-center items-center gap-2">
-                        <img className="h-5" src={item.icon} alt="icon" />
-                        <p className="text-sm">{item.name}</p>
-                    </a>
-                </div>
-            ))
-        }
-    </div>
-  )
-}
+  const [changeIcon, setChangeIcon] = useState([
+    true,
+    false,
+    false,
+    false,
+    false,
+  ]);
 
-export default SideBar
+  useEffect(() => {
+    const sidebarIcons = document.querySelectorAll("#sidebarIcons");
+    if (sidebarIcons.length > 0) {
+      sidebarIcons[0].classList.add(styles.activeSideBar);
+
+      const handleClick = (index) => {
+        // Update the active state
+        sidebarIcons.forEach((item) => {
+          item.classList.remove(styles.activeSideBar);
+        });
+
+        setChangeIcon((prevState) => prevState.map((_, i) => i === index));
+
+        sidebarIcons[index].classList.add(styles.activeSideBar);
+      };
+
+      sidebarIcons.forEach((item, index) => {
+        item.addEventListener("click", () => handleClick(index));
+      });
+
+      // Cleanup function to remove event listeners
+      return () => {
+        sidebarIcons.forEach((item, index) => {
+          item.removeEventListener("click", () => handleClick(index));
+        });
+      };
+    }
+  }, []);
+
+  return (
+    <div className={styles.sideBar}>
+      {SideBarData.map((item, index) => {
+        return (
+          <div className={styles.icons} id="sidebarIcons" key={item.icon}>
+            {!changeIcon[index] ? (
+              <img src={item.icon} alt="" />
+            ) : (
+              <img src={item.secondIcon} alt="" />
+            )}
+            <p>{item.name}</p>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+export default SideBar;

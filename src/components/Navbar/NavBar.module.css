@@ -1,0 +1,86 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #eaeaea;
+  border-bottom: 1px solid #cacaca;
+}
+
+.logo {
+  height: 30px;
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+}
+
+.search {
+  width: 570px;
+}
+
+.search form {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.search form span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  padding: 9px 15px;
+  border-radius: 3px;
+  background-color: #e0e0e0;
+  outline: 1px solid #cacaca;
+}
+
+.search form span input {
+  width: 100%;
+  background-color: transparent;
+  text-indent: 6px;
+}
+
+.search form span .icon {
+  height: 20px;
+}
+
+.search form span .icon img {
+  height: 100%;
+  width: 100%;
+}
+
+.search form > .icon {
+  height: 43px;
+  border-radius: 3px;
+  background-color: #e0e0e0;
+  outline: 1px solid #cacaca;
+  padding: 10px;
+}
+
+.search form > .icon img {
+  height: 100%;
+  width: 100%;
+}
+
+.util {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+}
+
+.util .icon {
+  height: 43px;
+  border-radius: 3px;
+  background-color: #e0e0e0;
+  outline: 1px solid #cacaca;
+  padding: 10px;
+}
+
+.util .icon img {
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,46 @@
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  position: fixed;
+  left: 0;
+  background-color: #eaeaea;
+  height: 100vh;
+  border-right: 1px solid #cacaca;
+}
+
+.sideBar .icons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 16px 10px;
+  gap: 4px;
+  text-align: center;
+  cursor: pointer;
+  border-right: 1px solid transparent;
+  transition: all ease-in-out 0.3s;
+}
+
+.sideBar .icons:hover {
+  border-right: 1px solid #8686d9;
+}
+
+.sideBar .icons:hover p {
+  color: #8686d9;
+}
+
+.sideBar .icons img {
+  height: 24px;
+}
+
+.sideBar .icons p {
+  font-size: 12px;
+}
+
+.sideBar .activeSideBar {
+  border-right: 1px solid #8686d9;
+}
+
+.sideBar .activeSideBar p {
+  color: #8686d9;
+}

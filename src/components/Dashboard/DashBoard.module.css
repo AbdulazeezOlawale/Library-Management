@@ -1,0 +1,45 @@
+/* Grid.module.css */
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
+  grid-template-rows: repeat(4, 1fr); /* 4 rows with equal height */
+  gap: 8px; /* Spacing between grid items */
+}
+
+.gridItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5; /* Light gray background */
+  border: 1px solid #ddd; /* Border */
+}
+
+.item1 {
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 2;
+}
+
+.item2 {
+  grid-column: 4 / span 1;
+  grid-row: 3 / span 2;
+}
+
+.item3 {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 2;
+}
+
+.item4 {
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 2;
+}
+
+.item5 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 3;
+}
+
+.item6 {
+  grid-column: 1 / span 2;
+  grid-row: 4 / span 1;
+}

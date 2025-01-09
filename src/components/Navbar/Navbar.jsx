@@ -1,41 +1,68 @@
+import styles from "../../Components/NavBar/NavBar.module.css";
 
-const Navbar = () => {
-  return (
-    <div className="bg-defaultBg px-4 py-3 default-border flex justify-between items-center ">
+const NavBar = () => {
 
-        <div className="">
-            <img src="./images/logoLight.png" alt="logo image" className="h-8"/>
-        </div>
+    // press ctrl to focus input
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Control") {
+            // Check if the 'Control' key is pressed
+            const input = document.getElementById("myInput");
+            input.focus(); // Focus the input field
+        }
+    });
 
-        <div className="flex">
-            <form className="flex items-center input-width">
-                <span className=" flex-1 items-center default-outline py-2 px-3 rounded-4 bg-inputBg">
-                    <div className="flex items-center">
-                        <img className="h-5" src="https://img.icons8.com/?size=100&id=XU3XKgdpT0qG&format=png&color=000000" alt="search" />
-                        <input type="text" className="bg-transparent w-full font-extralight indent-1"/>
-                        <img className="h-5" src="https://img.icons8.com/?size=100&id=aSQnLFjBXx6b&format=png&color=000000" alt="command" />
+    return (
+        <div className={styles.navbar}>
+            <a href="#" className={styles.logo}>
+                <img src="./images/logoLight.png" alt="" />
+            </a>
+
+            <div className={styles.search}>
+                <form>
+                    <span>
+                    <div className={styles.icon}>
+                        <img
+                        src="https://img.icons8.com/?size=100&id=59878&format=png&color=000000"
+                        alt=""
+                        />
                     </div>
-                </span>
-                <a className="link-style">
-                    <img className="h-5" src="https://img.icons8.com/?size=100&id=XU3XKgdpT0qG&format=png&color=000000" alt="search" />
+
+                    <input type="text" id="myInput" placeholder="Search" />
+
+                    <div className={styles.icon}>
+                        <img
+                        src="https://img.icons8.com/?size=100&id=aSQnLFjBXx6b&format=png&color=000000"
+                        alt=""
+                        />
+                    </div>
+                    </span>
+
+                    <div className={styles.icon}>
+                    <img
+                        src="https://img.icons8.com/?size=100&id=59878&format=png&color=000000"
+                        alt=""
+                    />
+                    </div>
+                </form>
+            </div>
+
+            <div className={styles.util}>
+                <div className={styles.icon}>
+                    <img
+                    src="https://img.icons8.com/?size=100&id=45474&format=png&color=000000"
+                    alt=""
+                    />
+                </div>
+
+                <a href="#" className={styles.icon}>
+                    <img
+                    src="https://img.icons8.com/?size=100&id=99268&format=png&color=000000"
+                    alt=""
+                    />
                 </a>
-                <a className="link-style">
-                    <img className="h-5" src="https://img.icons8.com/?size=100&id=s5NUIabJrb4C&format=png&color=000000" alt="settings" />
-                </a>
-            </form>
+            </div>
         </div>
+    );
+};
 
-        <div className="">
-            <button className="link-style">
-                <img className="h-5" src="https://img.icons8.com/?size=100&id=Y56jZNPHTK0X&format=png&color=000000" alt="theme" />
-            </button>
-
-            <button className="link-style">
-                <img className="h-5" src="https://img.icons8.com/?size=100&id=15263&format=png&color=000000" alt="profile" />
-            </button>
-        </div>
-    </div>
-  )
-}
-
-export default Navbar
+export default NavBar;
