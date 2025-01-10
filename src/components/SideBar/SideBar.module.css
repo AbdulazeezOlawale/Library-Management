@@ -9,6 +9,10 @@
   border-right: 1px solid #cacaca;
 }
 
+.sideBar .icons:nth-child(odd) {
+  background-color: #E0E0E0;
+}
+
 .sideBar .icons {
   display: flex;
   align-items: center;

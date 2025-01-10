@@ -1,4 +1,4 @@
-import { SideBarData } from "../../data";
+import data from "../../data";
 import styles from "../SideBar/SideBar.module.css";
 import { useEffect, useState } from "react";
 
@@ -42,9 +42,13 @@ const SideBar = () => {
 
   return (
     <div className={styles.sideBar}>
-      {SideBarData.map((item, index) => {
+      {data.SideBarData.map((item, index) => {
         return (
-          <div className={styles.icons} id="sidebarIcons" key={item.icon}>
+          <div
+            className={`${styles.icons} ${styles.slider}`}
+            id="sidebarIcons"
+            key={item.icon}
+          >
             {!changeIcon[index] ? (
               <img src={item.icon} alt="" />
             ) : (
