@@ -45,6 +45,23 @@ const data = {
       color: "#7874CB",
     },
   ],
+  record: [
+    {
+      icon: "https://img.icons8.com/?size=100&id=ywULFSPkh4kI&format=png&color=000000",
+      heading: "0150",
+      desc: "Total User Base",
+    },
+    {
+      icon: "https://img.icons8.com/?size=100&id=102048&format=png&color=000000",
+      heading: "01500",
+      desc: "Total Book Count",
+    },
+    {
+      icon: "https://img.icons8.com/?size=100&id=nceGVqDWR75q&format=png&color=000000",
+      heading: "0010",
+      desc: "Branch Count",
+    },
+  ],
 };
 
 export default data;

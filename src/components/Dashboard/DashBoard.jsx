@@ -7,7 +7,7 @@ const DashBoard = () => {
         <div className={`${styles.gridItem} ${styles.item1}`}>1</div>
         <div className={`${styles.gridItem} ${styles.item2}`}>2</div>
         <div className={`${styles.gridItem} ${styles.item3}`}>
-            
+          
         </div>
         <div className={`${styles.gridItem} ${styles.item4}`}>4</div>
         <div className={`${styles.gridItem} ${styles.item5}`}>
@@ -22,10 +22,13 @@ const DashBoard = () => {
 
           <span>
             {data.PieData.map((item, index) => (
-                <div key={index} className={styles.list}>
-                    <div style={{backgroundColor: `${item.color}`}} className={styles.bulletp}></div>
-                    <p>{item.title}</p>
-                </div>
+              <div key={index} className={styles.list}>
+                <div
+                  style={{ backgroundColor: `${item.color}` }}
+                  className={styles.bulletp}
+                ></div>
+                <p>{item.title}</p>
+              </div>
             ))}
           </span>
         </div>
