@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import styles from "../Util/Util.module.css";
 
-const Util = ({desc, img, para, id}) => {
+const Util = ({para, desc, img, id}) => {
   return (
     <div className={styles.util} key={id}>
       <div className={styles.left}>
