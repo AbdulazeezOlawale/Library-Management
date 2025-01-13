@@ -1,0 +1,44 @@
+.util {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: 1px solid #CACACA;
+    padding: 5px;
+    gap: 10px;
+    border-radius: var(--border-radius);
+}
+
+.util .left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: var(--border-radius);
+    padding: 5px;
+    background-color: #A7A7A7;
+    flex: 1;
+}
+
+.util .left .icon {
+    height: 30px;
+}
+
+.util .left .icon img {
+    height: 100%;
+    width: 100%;
+}
+
+.util .left .desc {
+    display: flex;
+    align-items: start;
+    gap: 0;
+    flex-direction: column;
+}
+
+.util .right {
+    height: 25px;
+}
+
+.util .right img {
+    height: 100%;
+    width: 100%;
+}

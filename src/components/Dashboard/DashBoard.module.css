@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   /* 4 columns with equal width */
+  height: fit-content;
   grid-template-rows: repeat(4, 1fr);
   /* 4 rows with equal height */
   gap: 10px;
@@ -37,13 +38,13 @@
 .item3_container {
   display: flex;
   flex-direction: column;
-  gap: 17px;
+  gap: 10px;
   align-items: start;
 }
 
 .item3_container .recordItem {
   background-color: white;
-  padding: 10px;
+  padding: 6px;
   border-radius: var(--border-radius);
   display: flex;
   align-items: center;
@@ -55,8 +56,8 @@
 
 .item3_container .recordItem .recordItem_icon {
   background-color: #A7A7A7;
-  height: 50px;
-  padding: 10px;
+  height: 45px;
+  padding: 5px;
   border-radius: var(--border-radius);
 }
 
@@ -72,6 +73,17 @@
 .item4 {
   grid-column: 3 / span 1;
   grid-row: 3 / span 2;
+}
+
+.item4_container {
+  /* display: block; */
+  width: 90%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
 }
 
 .item5 {

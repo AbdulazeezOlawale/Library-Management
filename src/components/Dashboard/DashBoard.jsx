@@ -1,5 +1,6 @@
 import data from "../../data";
 import styles from "../Dashboard/DashBoard.module.css";
+import Util from "./Util/Util";
 const DashBoard = () => {
   return (
     <>
@@ -23,8 +24,30 @@ const DashBoard = () => {
           </div>
         </div>
         <div className={`${styles.gridItem} ${styles.item4}`}>
-          <small>BookWorm Admins</small>
-          <img src="./images/vector.png" alt="" />
+          <div className={styles.item4_container}>
+            <p>BookWorm Admins</p>
+            <Util
+              desc="Admin ID : 1"
+              img="./images/vector.png"
+              para="Nisal Gunasekara"
+              id={1}
+            />
+            <Util
+              desc="Admin ID : 1"
+              img="./images/vector.png"
+              para="Nisal Gunasekara"
+              id={2} />
+            <Util
+              desc="Admin ID : 1"
+              img="./images/vector.png"
+              para="Nisal Gunasekara"
+              id={3} />
+            <Util
+              desc="Admin ID : 1"
+              img="./images/vector.png"
+              para="Nisal Gunasekara"
+              id={4} />
+          </div>
         </div>
         <div className={`${styles.gridItem} ${styles.item5}`}>
           <span>
